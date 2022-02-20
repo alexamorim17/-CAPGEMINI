@@ -13,14 +13,13 @@ public class ex1 {
 		System.out.print("Digite o número de andares da escada:  ");
 		n = ler.nextInt();
 
-		for (int cont = 1; cont <= n; cont++) {
+		for (int contador = 1; contador <= n; contador++) {
 
-			for (int b = n - cont; b >= 0; b--) { //Este for define o espaçamento do andar
-	 
+			for (int b = n - contador; b >= 0; b--) {
 				System.out.print(" ");
 			}
 
-			for (int imp = cont; imp > 0; imp--) { // Este for implementa os asteriscos
+			for (int asterisco = contador; asterisco > 0; asterisco--) {
 				System.out.print("*");
 			}
 			System.out.print("\n");
