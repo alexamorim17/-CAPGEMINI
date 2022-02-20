@@ -15,7 +15,7 @@ public class exercicio2 {
 		System.out.println("Digite uma senha: ");
 		senha = ler.nextLine();
 
-		if (senha.length() > 5) {
+		if (senha.length() > 5) { //Verifica se cumpre com os requisitos de caracteres m√≠nimos
 			requisito = true;
 			contador += 1;
 		}
@@ -23,7 +23,7 @@ public class exercicio2 {
 			requisito2 = true;
 			contador += 1;
 		}
-		for (int x = 0; x < senha.length(); x++) {
+		for (int x = 0; x < senha.length(); x++) {  //Verifica as autentica√ß√µes
 
 			if (senha.charAt(x) == '@' || senha.charAt(x) == '!' || senha.charAt(x) == '#' || senha.charAt(x) == '$'
 					|| senha.charAt(x) == '%' || senha.charAt(x) == '^' || senha.charAt(x) == '&'
@@ -46,16 +46,16 @@ public class exercicio2 {
 
 		}
 
-		if (requisito != true && (requisito3 == false || requisito4 == false || requisito5 == false)) {
-			System.out.print(senha.length() + " - VocÍ pode tornar a senha mais segura adicionando "
+		if (requisito != true && (requisito3 == false || requisito4 == false || requisito5 == false)) {  //Verifica a autentica√ß√£o devolve o n√∫mero de caracteres que falta e devolve com uma recomenda√ß√£o.
+			System.out.print(senha.length() + " - Voc√™ pode tornar a senha mais segura adicionando "
 					+ (6 - senha.length()) + " caracteres" + ", por exemplo," + senha + "eA$, "
 					+ ((int) 6 - senha.length() - 1)
-					+ " caracteres n„o s„o suficientes visto que a senha precisa ter um tamanho mÌnimo de 6 caracteres.");
+					+ " caracteres n√£o s√£o suficientes visto que a senha precisa ter um tamanho m√≠nimo de 6 caracteres.");
 		} else if (contador == 6) {
 			System.out.println(senha.length() + "- Senha forte , cumpre com os requisitos");
 		} else if (requisito == true && requisito3 == false || requisito4 == false || requisito5 == false) {
 			System.out.println(senha.length()
-					+ "- Sua senha cumpre com os requisitos de tamanho, porÈm n„o com outros requisitos, tente adicionar caracteres especiais, letra mai˙scula e min˙scula caso n„o tenha.");
+					+ "- Sua senha cumpre com os requisitos de tamanho, por√©m n√£o com outros requisitos, tente adicionar caracteres especiais, letra mai√∫scula e min√∫scula caso n√£o tenha.");
 		}
 
 	}
